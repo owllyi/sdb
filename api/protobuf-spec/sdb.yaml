@@ -1,0 +1,97 @@
+type: google.api.Service
+config_version: 3
+
+http:
+  rules:
+    - selector: proto.SDB.Set
+      post: /v1/set
+      body: "*"
+    - selector: proto.SDB.Get
+      post: /v1/get
+      body: "*"
+    - selector: proto.SDB.Del
+      post: /v1/del
+      body: "*"
+    - selector: proto.SDB.Incr
+      post: /v1/incr
+      body: "*"
+
+    - selector: proto.SDB.LPush
+      post: /v1/l-push
+      body: "*"
+    - selector: proto.SDB.LPop
+      post: /v1/l-pop
+      body: "*"
+    - selector: proto.SDB.LRange
+      post: /v1/l-range
+      body: "*"
+    - selector: proto.SDB.LExist
+      post: /v1/l-exist
+      body: "*"
+    - selector: proto.SDB.LDel
+      post: /v1/l-del
+      body: "*"
+    - selector: proto.SDB.LCount
+      post: /v1/l-count
+      body: "*"
+
+    - selector: proto.SDB.SPush
+      post: /v1/s-push
+      body: "*"
+    - selector: proto.SDB.SPop
+      post: /v1/s-pop
+      body: "*"
+    - selector: proto.SDB.SExist
+      post: /v1/s-exist
+      body: "*"
+    - selector: proto.SDB.SDel
+      post: /v1/s-del
+      body: "*"
+    - selector: proto.SDB.SCount
+      post: /v1/s-count
+      body: "*"
+
+    - selector: proto.SDB.ZPush
+      post: /v1/z-push
+      body: "*"
+    - selector: proto.SDB.ZPop
+      post: /v1/z-pop
+      body: "*"
+    - selector: proto.SDB.ZRange
+      post: /v1/z-range
+      body: "*"
+    - selector: proto.SDB.ZExist
+      post: /v1/z-exist
+      body: "*"
+    - selector: proto.SDB.ZDel
+      post: /v1/z-del
+      body: "*"
+    - selector: proto.SDB.ZCount
+      post: /v1/z-count
+      body: "*"
+
+    - selector: proto.SDB.BFCreate
+      post: /v1/bf-create
+      body: "*"
+    - selector: proto.SDB.BFDel
+      post: /v1/bf-del
+      body: "*"
+    - selector: proto.SDB.BFAdd
+      post: /v1/bf-add
+      body: "*"
+    - selector: proto.SDB.BFExist
+      post: /v1/bf-exist
+      body: "*"
+
+    - selector: proto.SDB.HLLCreate
+      post: /v1/hll-create
+      body: "*"
+    - selector: proto.SDB.HLLDel
+      post: /v1/hll-del
+      body: "*"
+    - selector: proto.SDB.HLLAdd
+      post: /v1/hll-add
+      body: "*"
+    - selector: proto.SDB.HLLCount
+      post: /v1/hll-count
+      body: "*"

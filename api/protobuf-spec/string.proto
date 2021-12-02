@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package proto;
+option go_package = "pkg/pb";
+
+message SetRequest {
+  bytes key = 1;
+  bytes value = 2;
+  bool sync = 100;
+}
+
+message SetResponse {
+  bool success = 1;
+}
+
+message GetRequest {
+  bytes key = 1;
+}
+
+message GetResponse {
+  bytes value = 1;
+}
+
+message DelRequest {
+  bytes key = 1;
+  bool sync = 100;
+}
+
+message DelResponse {
+  bool success = 1;
+}
+
+message IncrRequest {
+  bytes key = 1;
+  int32 delta = 2;
+  bool sync = 100;
+}
+
+message IncrResponse {
+  bool success = 1;
+}
